@@ -1,10 +1,108 @@
 # 📚 Bookly App
 
 
-
+---
 A beautiful and modern Flutter application for browsing and reading books. Bookly App features an animated splash screen, smooth UI, integration with book APIs, and an intuitive layout for users to browse, preview, and read books easily.
 
 ---
+## 🧱 Project Structure (Clean Architecture - Modular)
+
+<details>
+<summary><strong>📁 lib/ directory structure</strong></summary>
+
+```plaintext
+lib/
+├── constant.dart
+├── main.dart
+│
+├── core/
+│   ├── errors/
+│   │   └── failure.dart
+│   ├── utils/
+│   │   ├── api_service.dart
+│   │   ├── app_router.dart
+│   │   └── service_locator.dart
+│   ├── widgets/
+│   │   ├── books_action_button.dart
+│   │   ├── custom_circuliorindecator.dart
+│   │   └── error_message.dart
+│
+├── features/
+│   ├── home_feature/
+│   │   ├── data/
+│   │   │   ├── models/
+│   │   │   │   ├── accessinfo.dart
+│   │   │   │   ├── book_model.dart
+│   │   │   │   ├── epub.dart
+│   │   │   │   ├── imagelink.dart
+│   │   │   │   ├── industryidentifier.dart
+│   │   │   │   ├── listprice.dart
+│   │   │   │   ├── offer.dart
+│   │   │   │   ├── penalizationsummary.dart
+│   │   │   │   ├── readingmodes.dart
+│   │   │   │   ├── saleinfo.dart
+│   │   │   │   ├── searchinfo.dart
+│   │   │   │   └── volume_info.dart
+│   │   │   └── repos/
+│   │   │       ├── home_reps.dart
+│   │   │       └── home_reps_impl.dart
+│   │   └── presentation/
+│   │       ├── view/
+│   │       │   ├── home_view.dart
+│   │       │   ├── book_deatils_view.dart
+│   │       │   └── widgets/
+│   │       │       ├── best_saller_list_view_widget.dart
+│   │       │       ├── best_saller_view.dart
+│   │       │       ├── book_details_down_section.dart
+│   │       │       ├── book_details_up_section.dart
+│   │       │       ├── book_details_view_body.dart
+│   │       │       ├── book_rating.dart
+│   │       │       ├── custom_app_bar.dart
+│   │       │       ├── custom_book_details_app_bar.dart
+│   │       │       ├── custom_book_image.dart
+│   │       │       ├── custom_button_action_book.dart
+│   │       │       ├── featured_list_view_image.dart
+│   │       │       ├── home_view_body.dart
+│   │       │       └── similarbookslistview.dart
+│   │       └── view_model/
+│   │           ├── featured_books_cubit/
+│   │           │   ├── featured_books_cubit.dart
+│   │           │   └── featured_books_stat.dart
+│   │           ├── newest_books_cubit/
+│   │           │   ├── newest_books_cubit.dart
+│   │           │   └── newest_books_state.dart
+│   │           └── similar_books_cubit/
+│   │               ├── similar_books_cubit.dart
+│   │               └── similar_books_state.dart
+│
+│   ├── search_feature/
+│   │   ├── data/
+│   │   └── presentation/
+│   │       ├── view/
+│   │       │   ├── search_view.dart
+│   │       │   └── widgets/
+│   │       │       ├── custom_search_text_field.dart
+│   │       │       ├── search_result_list_view.dart
+│   │       │       └── search_view_body.dart
+│   │       └── view_model/
+│
+│   └── splash_feature/
+│       ├── data/
+│       └── presentation/
+│           ├── view/
+│           │   ├── splash_view.dart
+│           │   └── widgets/
+│           │       ├── slide_image_widget.dart
+│           │       ├── slide_text_widget.dart
+│           │       └── splash_view_body.dart
+│           └── view_model/
+│
+├── generated/
+│   └── assets.dart
+
+```
+</details>
+
 
 ## 🎬 Splash Screen (Animated)
 
